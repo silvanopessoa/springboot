@@ -1,4 +1,4 @@
-package br.com.silvanopessoa;
+package br.com.silvanopessoa.demo;
 
 import java.util.Map;
 
@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class WhateverIWant {
 	
-	@RequestMapping("/hi/{name}")
-	public String hiThere(Map model, @PathVariable String name){
-		model.put("name", name);
+	@RequestMapping("/hi")
+	public String hiThere(Map model){
 		return "hello";
 	}
 
