@@ -9,6 +9,16 @@ public class Team {
 	String mascotte;
 	Set<Player> players;
 	
+	public Team() {
+		super();
+	}	
+	
+	public Team(String location, String name, Set<Player> players) {
+		super();
+		this.location = location;
+		this.name = name;
+		this.players = players;
+	}
 	public Set<Player> getPlayers() {
 		return players;
 	}
