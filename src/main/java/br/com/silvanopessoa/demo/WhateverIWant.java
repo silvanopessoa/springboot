@@ -24,6 +24,7 @@ public class WhateverIWant {
 		Set<Player> players = new HashSet<>();
 		players.add(new Player("Charlie Brown","pitcher"));
 		players.add(new Player("Snoopy","shortstop"));
+		team = new Team("California","Peanuts",players);
 	}
 
 	@RequestMapping("/hi")
