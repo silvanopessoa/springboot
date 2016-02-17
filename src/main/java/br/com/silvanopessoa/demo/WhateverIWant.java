@@ -10,11 +10,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import br.com.silvanopessoa.demo.domain.Player;
 import br.com.silvanopessoa.demo.domain.Team;
 
-@Controller
+@RestController
 public class WhateverIWant {
 
 	private Team team;
@@ -28,7 +29,7 @@ public class WhateverIWant {
 	}
 
 	@RequestMapping("/hi")
-	public @ResponseBody Team hiThere(){
+	public Team hiThere(){
 		return team;
 	}
 
