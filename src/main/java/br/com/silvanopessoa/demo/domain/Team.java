@@ -14,7 +14,7 @@ public class Team {
 	}	
 	
 	public Team(String location, String name, Set<Player> players) {
-		super();
+		this();
 		this.location = location;
 		this.name = name;
 		this.players = players;
