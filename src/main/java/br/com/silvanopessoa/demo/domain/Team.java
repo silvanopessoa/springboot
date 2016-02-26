@@ -1,15 +1,28 @@
 package br.com.silvanopessoa.demo.domain;
 
+import static javax.persistence.CascadeType.ALL;
+
 import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
+@Entity
 @XmlRootElement
 public class Team {
 	
+	@Id
+	@GeneratedValue
+	Long id;
 	String name;
 	String location;
 	String mascotte;
+	@OneToMany(cascade=ALL)
+	@JoinColumn(name="teamId")
 	Set<Player> players;
 	
 	public Team() {
